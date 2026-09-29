@@ -1,0 +1,1746 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petualangan Ibadah: Jelajah Shalat Sunah - MPI PAI Kelas 4 SD</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Fredoka & Nunito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        fredoka: ['Fredoka', 'sans-serif'],
+                        nunito: ['Nunito', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            green: '#10B981',
+                            teal: '#06B6D4',
+                            yellow: '#F59E0B',
+                            purple: '#8B5CF6',
+                            pink: '#EC4899',
+                            night: '#1E1B4B',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'pulse-glow': 'pulseGlow 2s infinite',
+                        'spin-slow': 'spin 12s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { opacity: '1', filter: 'drop-shadow(0 0 15px rgba(245, 158, 11, 0.6))' },
+                            '50%': { opacity: '0.8', filter: 'drop-shadow(0 0 25px rgba(245, 158, 11, 0.9))' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            user-select: none;
+            -webkit-user-select: none;
+            overflow-x: hidden;
+            background-color: #0f172a;
+        }
+
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #06b6d4;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0891b2;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 2px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .btn-3d {
+            transition: all 0.15s ease-in-out;
+            box-shadow: 0px 6px 0px rgba(0,0,0,0.2);
+        }
+        .btn-3d:active {
+            transform: translateY(4px);
+            box-shadow: 0px 2px 0px rgba(0,0,0,0.2);
+        }
+
+        .btn-green-3d {
+            background-color: #10b981;
+            box-shadow: 0px 6px 0px #047857;
+        }
+        .btn-green-3d:active {
+            box-shadow: 0px 2px 0px #047857;
+        }
+
+        .btn-yellow-3d {
+            background-color: #f59e0b;
+            box-shadow: 0px 6px 0px #b45309;
+        }
+        .btn-yellow-3d:active {
+            box-shadow: 0px 2px 0px #b45309;
+        }
+
+        .btn-blue-3d {
+            background-color: #06b6d4;
+            box-shadow: 0px 6px 0px #0e7490;
+        }
+        .btn-blue-3d:active {
+            box-shadow: 0px 2px 0px #0e7490;
+        }
+
+        .btn-purple-3d {
+            background-color: #8b5cf6;
+            box-shadow: 0px 6px 0px #6d28d9;
+        }
+        .btn-purple-3d:active {
+            box-shadow: 0px 2px 0px #6d28d9;
+        }
+
+        /* Certificate Styling */
+        .cert-border {
+            border: 12px double #f59e0b;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-slate-800 flex flex-col justify-between relative bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.65)), url('https://i.ibb.co.com/1ftVnJzH/Screenshot-2026-09-29-19-38-21-725-com-android-chrome-edit.jpg');">
+
+    <!-- Top Audio & Navigation Bar -->
+    <header class="w-full max-w-6xl mx-auto p-4 flex justify-between items-center z-50">
+        <!-- Logo / Title Badge -->
+        <div class="flex items-center space-x-3 bg-white/90 backdrop-blur-md px-4 py-2 rounded-2xl shadow-lg border border-white/50 cursor-pointer" onclick="navigateTo('main-menu')">
+            <div class="w-10 h-10 rounded-xl bg-amber-400 flex items-center justify-center text-white text-xl shadow">
+                <i class="fa-solid font-bold fa-mosque"></i>
+            </div>
+            <div>
+                <h1 class="font-heading font-bold text-lg leading-none text-teal-700">Jelajah Shalat Sunah</h1>
+                <p class="text-xs text-slate-500 font-semibold">PAI Kelas IV SD • Bab 4</p>
+            </div>
+        </div>
+
+        <!-- Top Right Controls -->
+        <div class="flex items-center space-x-2">
+            <button id="btn-sound-bgm" onclick="toggleBGM()" class="w-12 h-12 rounded-2xl bg-white/90 shadow-md flex items-center justify-center text-cyan-600 text-lg hover:bg-cyan-50 transition border border-white/50" title="Musik Latar">
+                <i id="icon-bgm" class="fa-solid fa-music"></i>
+            </button>
+            <button id="btn-sound-sfx" onclick="toggleSFX()" class="w-12 h-12 rounded-2xl bg-white/90 shadow-md flex items-center justify-center text-emerald-600 text-lg hover:bg-emerald-50 transition border border-white/50" title="Efek Suara">
+                <i id="icon-sfx" class="fa-solid fa-volume-high"></i>
+            </button>
+            <button onclick="openModal('modal-petunjuk')" class="w-12 h-12 rounded-2xl bg-amber-400 text-white shadow-md flex items-center justify-center text-lg hover:bg-amber-500 transition border border-amber-300" title="Petunjuk">
+                <i class="fa-solid fa-circle-question"></i>
+            </button>
+            <button onclick="navigateTo('main-menu')" class="hidden" id="nav-btn-home" title="Kembali ke Menu Utama">
+                <div class="w-12 h-12 rounded-2xl bg-emerald-500 text-white shadow-md flex items-center justify-center text-lg hover:bg-emerald-600 transition border border-emerald-400">
+                    <i class="fa-solid fa-house"></i>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="w-full max-w-6xl mx-auto px-4 py-2 flex-grow flex items-center justify-center relative z-10">
+
+        <!-- 0. SPLASH SCREEN -->
+        <section id="screen-splash" class="w-full text-center py-12 flex flex-col items-center justify-center min-h-[75vh] relative">
+            <div class="mb-4">
+                <span class="bg-amber-400 text-slate-900 font-bold px-5 py-2 rounded-full text-sm uppercase tracking-wider shadow-lg animate-pulse-glow inline-block">
+                    🌙 Kelas IV SD • Bab 4
+                </span>
+            </div>
+
+            <h1 class="font-heading text-4xl sm:text-6xl font-extrabold text-white tracking-wide drop-shadow-lg mb-3">
+                PETUALANGAN IBADAH
+            </h1>
+            <h2 class="font-heading text-2xl sm:text-3xl font-bold text-amber-300 drop-shadow mb-6">
+                ✨ Jelajah Shalat Sunah ✨
+            </h2>
+            <p class="text-white/95 text-base sm:text-lg max-w-xl mx-auto mb-10 font-semibold drop-shadow">
+                Mari belajar Shalat Sunah Rawatib, Dhuha, dan Tahajud secara seru, interaktif, dan penuh tantangan! 🚀
+            </p>
+
+            <button onclick="playAudio('sound-start'); navigateTo('main-menu')" class="btn-3d btn-yellow-3d text-slate-900 font-heading font-bold text-xl sm:text-2xl px-10 py-4 rounded-3xl cursor-pointer flex items-center space-x-3 mx-auto transform hover:scale-105">
+                <span>MULAI PETUALANGAN</span>
+                <i class="fa-solid fa-rocket text-2xl animate-bounce"></i>
+            </button>
+
+            <!-- Creator Credit Badge (Hanya Tampil di Halaman Awal & Pojok Kiri Bawah Tanpa Simbol) -->
+            <div class="fixed bottom-4 left-4 z-40">
+                <div class="bg-slate-900/85 backdrop-blur-md text-amber-300 border border-amber-400/50 px-4 py-2 rounded-2xl text-xs sm:text-sm font-bold shadow-lg">
+                    Dibuat oleh : Azis Fatoni, S.Pd.I
+                </div>
+            </div>
+        </section>
+
+        <!-- 1. MAIN MENU SCREEN -->
+        <section id="screen-main-menu" class="w-full hidden py-4">
+            <div class="text-center mb-8">
+                <span class="bg-white/20 text-white font-bold text-sm px-4 py-1.5 rounded-full border border-white/30">
+                    Pilih Menu Petualangan
+                </span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white mt-2 drop-shadow">
+                    Mau Mulai dari Mana, Sahabat?
+                </h2>
+            </div>
+
+            <!-- 4 Main Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                
+                <!-- Card 1: Tujuan -->
+                <div onclick="navigateTo('tujuan')" class="glass-card rounded-3xl p-6 text-center cursor-pointer transform hover:-translate-y-2 hover:shadow-2xl transition duration-300 group border-b-8 border-emerald-500">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-emerald-100 flex items-center justify-center text-emerald-600 text-4xl group-hover:scale-110 transition shadow-inner">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <span class="bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Menu 1</span>
+                    <h3 class="font-heading text-2xl font-bold text-slate-800 mt-2 mb-1">Tujuan</h3>
+                    <p class="text-xs text-slate-600">6 Misi utama yang akan kamu capai!</p>
+                </div>
+
+                <!-- Card 2: Materi -->
+                <div onclick="navigateTo('materi')" class="glass-card rounded-3xl p-6 text-center cursor-pointer transform hover:-translate-y-2 hover:shadow-2xl transition duration-300 group border-b-8 border-cyan-500">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-cyan-100 flex items-center justify-center text-cyan-600 text-4xl group-hover:scale-110 transition shadow-inner">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                    </div>
+                    <span class="bg-cyan-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Menu 2</span>
+                    <h3 class="font-heading text-2xl font-bold text-slate-800 mt-2 mb-1">Materi</h3>
+                    <p class="text-xs text-slate-600">4 Zona Jelajah Shalat Sunah</p>
+                </div>
+
+                <!-- Card 3: Game -->
+                <div onclick="navigateTo('game')" class="glass-card rounded-3xl p-6 text-center cursor-pointer transform hover:-translate-y-2 hover:shadow-2xl transition duration-300 group border-b-8 border-amber-500">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-amber-100 flex items-center justify-center text-amber-600 text-4xl group-hover:scale-110 transition shadow-inner">
+                        <i class="fa-solid fa-gamepad"></i>
+                    </div>
+                    <span class="bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Menu 3</span>
+                    <h3 class="font-heading text-2xl font-bold text-slate-800 mt-2 mb-1">Game</h3>
+                    <p class="text-xs text-slate-600">Petualangan 3 Level & Skor</p>
+                </div>
+
+                <!-- Card 4: Evaluasi -->
+                <div onclick="navigateTo('evaluasi')" class="glass-card rounded-3xl p-6 text-center cursor-pointer transform hover:-translate-y-2 hover:shadow-2xl transition duration-300 group border-b-8 border-purple-500">
+                    <div class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-purple-100 flex items-center justify-center text-purple-600 text-4xl group-hover:scale-110 transition shadow-inner">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                    </div>
+                    <span class="bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Menu 4</span>
+                    <h3 class="font-heading text-2xl font-bold text-slate-800 mt-2 mb-1">Evaluasi</h3>
+                    <p class="text-xs text-slate-600">10 Soal Uji Pemahaman</p>
+                </div>
+
+            </div>
+
+            <!-- Bottom Mascot Quote -->
+            <div class="mt-8 max-w-md mx-auto bg-white/90 backdrop-blur rounded-2xl p-4 shadow-lg border border-white/60 flex items-center space-x-4">
+                <div class="w-12 h-12 rounded-full bg-amber-400 flex items-center justify-center text-2xl shrink-0">
+                    👦🏻
+                </div>
+                <div class="text-left text-xs sm:text-sm text-slate-700">
+                    <p class="font-bold text-teal-700">Ahmad berkata:</p>
+                    <p>"Ayo selesaikan semua zona materi lalu dapatkan skor tertinggi di Game dan Evaluasi!"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. MENU TUJUAN PEMBELAJARAN -->
+        <section id="screen-tujuan" class="w-full hidden py-4">
+            <div class="glass-card rounded-3xl p-6 sm:p-8 max-w-4xl mx-auto shadow-2xl">
+                <!-- Header -->
+                <div class="flex items-center justify-between border-b pb-4 mb-6">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-500 text-white flex items-center justify-center text-2xl shadow">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <div>
+                            <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-800">🎯 Misi Pembelajaran</h2>
+                            <p class="text-xs text-slate-500 font-semibold">Klik setiap kartu misi untuk mengaktifkannya!</p>
+                        </div>
+                    </div>
+                    <div id="misi-counter" class="bg-emerald-100 text-emerald-800 font-bold px-4 py-1.5 rounded-full text-sm">
+                        Misi Selesai: <span id="completed-misi-count">0</span>/6 ⭐
+                    </div>
+                </div>
+
+                <p class="text-slate-700 font-semibold mb-4 text-sm sm:text-base">
+                    Setelah menyelesaikan petualangan pembelajaran ini, aku mampu:
+                </p>
+
+                <!-- 6 Mission Cards Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Misi 1 -->
+                    <div onclick="completeMisi(this)" class="misi-card border-2 border-slate-200 rounded-2xl p-4 flex items-start space-x-3 cursor-pointer hover:border-emerald-400 hover:bg-emerald-50/50 transition">
+                        <div class="w-10 h-10 rounded-xl bg-cyan-100 text-cyan-600 flex items-center justify-center text-lg font-bold shrink-0">1</div>
+                        <div>
+                            <h4 class="font-heading font-bold text-slate-800 text-base">🎯 Pengertian Shalat Sunah</h4>
+                            <p class="text-xs text-slate-600 mt-0.5">Menjelaskan pengertian shalat sunah dengan benar.</p>
+                        </div>
+                        <i class="misi-star fa-regular fa-star text-slate-300 text-xl ml-auto"></i>
+                    </div>
+
+                    <!-- Misi 2 -->
+                    <div onclick="completeMisi(this)" class="misi-card border-2 border-slate-200 rounded-2xl p-4 flex items-start space-x-3 cursor-pointer hover:border-emerald-400 hover:bg-emerald-50/50 transition">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-lg font-bold shrink-0">2</div>
+                        <div>
+                            <h4 class="font-heading font-bold text-slate-800 text-base">🕌 Shalat Sunah Rawatib</h4>
+                            <p class="text-xs text-slate-600 mt-0.5">Menjelaskan ketentuan shalat sunah Rawatib.</p>
+                        </div>
+                        <i class="misi-star fa-regular fa-star text-slate-300 text-xl ml-auto"></i>
+                    </div>
+
+                    <!-- Misi 3 -->
+                    <div onclick="completeMisi(this)" class="misi-card border-2 border-slate-200 rounded-2xl p-4 flex items-start space-x-3 cursor-pointer hover:border-emerald-400 hover:bg-emerald-50/50 transition">
+                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-lg font-bold shrink-0">3</div>
+                        <div>
+                            <h4 class="font-heading font-bold text-slate-800 text-base">☀️ Shalat Sunah Dhuha</h4>
+                            <p class="text-xs text-slate-600 mt-0.5">Menjelaskan ketentuan shalat sunah Dhuha.</p>
+                        </div>
+                        <i class="misi-star fa-regular fa-star text-slate-300 text-xl ml-auto"></i>
+                    </div>
+
+                    <!-- Misi 4 -->
+                    <div onclick="completeMisi(this)" class="misi-card border-2 border-slate-200 rounded-2xl p-4 flex items-start space-x-3 cursor-pointer hover:border-emerald-400 hover:bg-emerald-50/50 transition">
+                        <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-lg font-bold shrink-0">4</div>
+                        <div>
+                            <h4 class="font-heading font-bold text-slate-800 text-base">🌙 Shalat Sunah Tahajud</h4>
+                            <p class="text-xs text-slate-600 mt-0.5">Menjelaskan ketentuan shalat sunah Tahajud.</p>
+                        </div>
+                        <i class="misi-star fa-regular fa-star text-slate-300 text-xl ml-auto"></i>
+                    </div>
+
+                    <!-- Misi 5 -->
+                    <div onclick="completeMisi(this)" class="misi-card border-2 border-slate-200 rounded-2xl p-4 flex items-start space-x-3 cursor-pointer hover:border-emerald-400 hover:bg-emerald-50/50 transition">
+                        <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-lg font-bold shrink-0">5</div>
+                        <div>
+                            <h4 class="font-heading font-bold text-slate-800 text-base">🙏 Praktik Tata Cara</h4>
+                            <p class="text-xs text-slate-600 mt-0.5">Mempraktikkan tata cara shalat sunah dengan benar.</p>
+                        </div>
+                        <i class="misi-star fa-regular fa-star text-slate-300 text-xl ml-auto"></i>
+                    </div>
+
+                    <!-- Misi 6 -->
+                    <div onclick="completeMisi(this)" class="misi-card border-2 border-slate-200 rounded-2xl p-4 flex items-start space-x-3 cursor-pointer hover:border-emerald-400 hover:bg-emerald-50/50 transition">
+                        <div class="w-10 h-10 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center text-lg font-bold shrink-0">6</div>
+                        <div>
+                            <h4 class="font-heading font-bold text-slate-800 text-base">❤️ Pembiasaan Diri</h4>
+                            <p class="text-xs text-slate-600 mt-0.5">Membiasakan shalat sunah dalam kehidupan sehari-hari.</p>
+                        </div>
+                        <i class="misi-star fa-regular fa-star text-slate-300 text-xl ml-auto"></i>
+                    </div>
+                </div>
+
+                <div class="mt-6 flex justify-end">
+                    <button onclick="navigateTo('materi')" class="btn-3d btn-green-3d text-white font-heading font-bold px-6 py-3 rounded-2xl flex items-center space-x-2">
+                        <span>Lanjut ke Materi</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. MENU MATERI (LENGKAP Sesuai Misi 1 - Misi 6) -->
+        <section id="screen-materi" class="w-full hidden py-2">
+            <div class="glass-card rounded-3xl p-4 sm:p-6 max-w-5xl mx-auto shadow-2xl">
+                
+                <!-- Zone Navigation Map -->
+                <div class="mb-6">
+                    <div class="text-center mb-3">
+                        <h2 class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-800">🗺️ Peta Jelajah Materi Shalat Sunah</h2>
+                        <p class="text-xs text-slate-500 font-semibold">Diperkaya & Disesuaikan Lengkap dengan Misi 1 - Misi 6 PAI Kelas IV SD</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 bg-slate-100 p-2 rounded-2xl">
+                        <button onclick="switchZone(1)" id="tab-zone-1" class="zone-tab font-heading font-bold text-xs sm:text-sm py-2.5 px-3 rounded-xl transition flex items-center justify-center space-x-1.5 bg-cyan-500 text-white shadow">
+                            <span>🏠 Zona 1: Konsep & Hikmah</span>
+                        </button>
+                        <button onclick="switchZone(2)" id="tab-zone-2" class="zone-tab font-heading font-bold text-xs sm:text-sm py-2.5 px-3 rounded-xl transition flex items-center justify-center space-x-1.5 text-slate-600 hover:bg-slate-200">
+                            <span>🕌 Zona 2: Shalat Rawatib</span>
+                        </button>
+                        <button onclick="switchZone(3)" id="tab-zone-3" class="zone-tab font-heading font-bold text-xs sm:text-sm py-2.5 px-3 rounded-xl transition flex items-center justify-center space-x-1.5 text-slate-600 hover:bg-slate-200">
+                            <span>☀️ Zona 3: Shalat Dhuha</span>
+                        </button>
+                        <button onclick="switchZone(4)" id="tab-zone-4" class="zone-tab font-heading font-bold text-xs sm:text-sm py-2.5 px-3 rounded-xl transition flex items-center justify-center space-x-1.5 text-slate-600 hover:bg-slate-200">
+                            <span>🌙 Zona 4: Tahajud & Amalan</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ZONE CONTENTS -->
+
+                <!-- ZONA 1: Pengertian, Perbedaan, Tingkatan, & Hikmah Shalat Sunah (Misi 1 & Misi 6) -->
+                <div id="zone-content-1" class="zone-content">
+                    <div class="bg-gradient-to-r from-cyan-500 to-sky-600 text-white p-5 sm:p-6 rounded-2xl mb-6 shadow-md flex flex-col sm:flex-row items-center justify-between">
+                        <div>
+                            <span class="bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">🎯 Misi 1 & Misi 6</span>
+                            <h3 class="font-heading text-2xl sm:text-3xl font-extrabold mt-1">Mengenal Shalat Sunah & Hikmahnya</h3>
+                            <p class="text-cyan-100 text-xs sm:text-sm mt-1">Konsep dasar ibadah sunah, perbedaan dengan shalat fardu, dan keutamaan penambah pahala.</p>
+                        </div>
+                        <div class="text-5xl mt-3 sm:mt-0 opacity-90">✨</div>
+                    </div>
+
+                    <!-- 1. Pengertian & Hukum Shalat Sunah -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <div class="bg-white p-5 rounded-2xl border-2 border-cyan-100 shadow-sm hover:shadow-md transition">
+                            <h4 class="font-heading font-bold text-lg text-cyan-700 mb-2 flex items-center space-x-2">
+                                <i class="fa-solid fa-book-quran"></i>
+                                <span>1. Apa itu Shalat Sunah?</span>
+                            </h4>
+                            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-3">
+                                <strong>Shalat Sunah</strong> adalah shalat yang dianjurkan dan diteladankan oleh Nabi Muhammad Saw. untuk dilaksanakan sebagai pelengkap dan penyempurna shalat fardu.
+                            </p>
+                            <div class="grid grid-cols-2 gap-2 text-xs font-bold">
+                                <div class="bg-emerald-50 p-3 rounded-xl border border-emerald-200 text-emerald-800 text-center">
+                                    <span class="text-lg">✅</span><br>Dikerjakan:<br><span class="font-semibold text-slate-600">Mendapatkan Pahala Berlipat</span>
+                                </div>
+                                <div class="bg-amber-50 p-3 rounded-xl border border-amber-200 text-amber-800 text-center">
+                                    <span class="text-lg">⭕</span><br>Ditinggalkan:<br><span class="font-semibold text-slate-600">Tidak Berdosa</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-2xl border-2 border-purple-100 shadow-sm hover:shadow-md transition">
+                            <h4 class="font-heading font-bold text-lg text-purple-700 mb-2 flex items-center space-x-2">
+                                <i class="fa-solid fa-layer-group"></i>
+                                <span>2. Tingkatan Shalat Sunah</span>
+                            </h4>
+                            <div class="space-y-2 text-xs">
+                                <div class="bg-purple-50 p-3 rounded-xl border border-purple-200">
+                                    <p class="font-bold text-purple-900 text-sm">⭐ Sunah Mu'akkad (Sangat Dianjurkan)</p>
+                                    <p class="text-slate-600 mt-0.5">Shalat sunah yang selalu dan hampir tidak pernah ditinggalkan oleh Rasulullah Saw. Contoh: <em>Rawatib tertentu, Dhuha, Tahajud, Witir</em>.</p>
+                                </div>
+                                <div class="bg-indigo-50 p-3 rounded-xl border border-indigo-200">
+                                    <p class="font-bold text-indigo-900 text-sm">🔹 Sunah Ghairu Mu'akkad (Dianjurkan Biasa)</p>
+                                    <p class="text-slate-600 mt-0.5">Shalat sunah yang kadang dikerjakan dan kadang tidak oleh Rasulullah Saw. Contoh: <em>4 Rakaat Qabliyah Asar, Qabliyah Magrib</em>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comparison Table: Fardu vs Sunah -->
+                    <div class="bg-white p-5 rounded-2xl border-2 border-slate-200 shadow-sm mb-6">
+                        <h4 class="font-heading font-bold text-slate-800 text-base mb-3 flex items-center space-x-2">
+                            <i class="fa-solid fa-scale-balanced text-cyan-600"></i>
+                            <span>Tabel Perbandingan Shalat Fardu vs Shalat Sunah:</span>
+                        </h4>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-xs text-left border-collapse">
+                                <thead>
+                                    <tr class="bg-slate-100 text-slate-800 font-heading">
+                                        <th class="p-2.5 rounded-l-xl border-b">Pembeda</th>
+                                        <th class="p-2.5 border-b text-emerald-700">Shalat Fardu (Wajib)</th>
+                                        <th class="p-2.5 rounded-r-xl border-b text-cyan-700">Shalat Sunah</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100 text-slate-700">
+                                    <tr>
+                                        <td class="p-2.5 font-bold">Hukum</td>
+                                        <td class="p-2.5 text-emerald-700 font-semibold">Wajib (Ditinggalkan berdosa)</td>
+                                        <td class="p-2.5 text-cyan-700 font-semibold">Sunah (Ditinggalkan tidak berdosa)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2.5 font-bold">Jumlah Waktu</td>
+                                        <td class="p-2.5">5 Waktu Utama (17 Rakaat)</td>
+                                        <td class="p-2.5">Beragam (Sesuai jenis shalat sunah)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2.5 font-bold">Fungsi Utama</td>
+                                        <td class="p-2.5">Kewajiban pokok seorang Muslim</td>
+                                        <td class="p-2.5">Pelengkap & penyempurna shalat fardu</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 6 Utama Hikmah Shalat Sunah -->
+                    <div class="bg-emerald-50 border-2 border-emerald-200 p-5 rounded-2xl mb-6">
+                        <h4 class="font-heading font-bold text-emerald-900 text-base mb-3 flex items-center space-x-2">
+                            <i class="fa-solid fa-heart-circle-check text-emerald-600"></i>
+                            <span>💡 6 Hikmah & Keutamaan Shalat Sunah (Misi 6):</span>
+                        </h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                            <div class="bg-white p-3 rounded-xl border border-emerald-100 shadow-sm flex items-start space-x-2.5">
+                                <span class="text-2xl">🛠️</span>
+                                <div>
+                                    <h5 class="font-bold text-xs text-slate-800">Menutup Kekurangan</h5>
+                                    <p class="text-[11px] text-slate-600">Menambal kekurangan shalat fardu di hari kiamat.</p>
+                                </div>
+                            </div>
+                            <div class="bg-white p-3 rounded-xl border border-emerald-100 shadow-sm flex items-start space-x-2.5">
+                                <span class="text-2xl">📈</span>
+                                <div>
+                                    <h5 class="font-bold text-xs text-slate-800">Peningkat Pahala</h5>
+                                    <p class="text-[11px] text-slate-600">Menambah tabungan amal kebaikan untuk akhirat.</p>
+                                </div>
+                            </div>
+                            <div class="bg-white p-3 rounded-xl border border-emerald-100 shadow-sm flex items-start space-x-2.5">
+                                <span class="text-2xl">🕊️</span>
+                                <div>
+                                    <h5 class="font-bold text-xs text-slate-800">Ketenangan Hati</h5>
+                                    <p class="text-[11px] text-slate-600">Memberikan rasa tenteram, damai, dan lapang dada.</p>
+                                </div>
+                            </div>
+                            <div class="bg-white p-3 rounded-xl border border-emerald-100 shadow-sm flex items-start space-x-2.5">
+                                <span class="text-2xl">👑</span>
+                                <div>
+                                    <h5 class="font-bold text-xs text-slate-800">Bukti Cinta Rasul</h5>
+                                    <p class="text-[11px] text-slate-600">Meneladani ajaran dan kebiasaan Nabi Muhammad Saw.</p>
+                                </div>
+                            </div>
+                            <div class="bg-white p-3 rounded-xl border border-emerald-100 shadow-sm flex items-start space-x-2.5">
+                                <span class="text-2xl">🧹</span>
+                                <div>
+                                    <h5 class="font-bold text-xs text-slate-800">Pembersih Dosa</h5>
+                                    <p class="text-[11px] text-slate-600">Menebus dan menghapus dosa-dosa kecil sehari-hari.</p>
+                                </div>
+                            </div>
+                            <div class="bg-white p-3 rounded-xl border border-emerald-100 shadow-sm flex items-start space-x-2.5">
+                                <span class="text-2xl">🌟</span>
+                                <div>
+                                    <h5 class="font-bold text-xs text-slate-800">Mendekatkan Diri</h5>
+                                    <p class="text-[11px] text-slate-600">Menjadi hamba yang makin dicintai oleh Allah Swt.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Quiz in Zone 1 -->
+                    <div class="bg-amber-50 border-2 border-amber-300 rounded-2xl p-5 text-center">
+                        <h4 class="font-heading font-bold text-amber-900 text-base mb-1">🤔 Quiz Refleksi Zona 1</h4>
+                        <p class="text-xs font-semibold text-slate-800 mb-3">"Mengapa kita sangat dianjurkan mengerjakan Shalat Sunah walaupun sudah mengerjakan Shalat Fardu?"</p>
+
+                        <div id="z1-quiz-buttons" class="grid grid-cols-1 sm:grid-cols-2 gap-2 max-w-lg mx-auto">
+                            <button onclick="checkZone1Reflect(false)" class="bg-white border-2 border-amber-200 hover:bg-amber-100 text-slate-700 font-bold p-2.5 rounded-xl text-xs shadow-sm">
+                                A. Agar dipuji oleh teman-teman di sekolah
+                            </button>
+                            <button onclick="checkZone1Reflect(true)" class="bg-white border-2 border-amber-200 hover:bg-amber-100 text-slate-700 font-bold p-2.5 rounded-xl text-xs shadow-sm">
+                                B. Melengkapi kekurangan shalat fardu & menambah amalan pahala
+                            </button>
+                        </div>
+                        <div id="z1-quiz-feedback" class="mt-3 font-bold text-xs hidden"></div>
+                    </div>
+                </div>
+
+                <!-- ZONA 2: Shalat Sunah Rawatib (Misi 2 & Misi 5) -->
+                <div id="zone-content-2" class="zone-content hidden">
+                    <div class="bg-gradient-to-r from-emerald-500 to-teal-600 text-white p-5 sm:p-6 rounded-2xl mb-6 shadow-md">
+                        <span class="bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">🎯 Misi 2 & Misi 5</span>
+                        <h3 class="font-heading text-2xl sm:text-3xl font-extrabold mt-1">Ketentuan Shalat Sunah Rawatib</h3>
+                        <p class="text-emerald-100 text-xs sm:text-sm mt-1">Shalat sunah pendamping yang mengiringi shalat fardu lima waktu (Qabliyah & Ba'diyah).</p>
+                    </div>
+
+                    <!-- Definition & Rules -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6 text-xs">
+                        <div class="bg-teal-50 border-2 border-teal-200 p-3.5 rounded-2xl">
+                            <h5 class="font-heading font-bold text-teal-800 text-sm mb-1">🌅 Qabliyah</h5>
+                            <p class="text-slate-700">Shalat sunah Rawatib yang dikerjakan <strong>SEBELUM</strong> shalat fardu dilaksanakan.</p>
+                        </div>
+                        <div class="bg-teal-50 border-2 border-teal-200 p-3.5 rounded-2xl">
+                            <h5 class="font-heading font-bold text-teal-800 text-sm mb-1">🌆 Ba'diyah</h5>
+                            <p class="text-slate-700">Shalat sunah Rawatib yang dikerjakan <strong>SESUDAH</strong> shalat fardu dilaksanakan.</p>
+                        </div>
+                        <div class="bg-amber-50 border-2 border-amber-200 p-3.5 rounded-2xl">
+                            <h5 class="font-heading font-bold text-amber-800 text-sm mb-1">📋 Ketentuan Khusus</h5>
+                            <p class="text-slate-700">Dikerjakan <strong>Munfarid</strong> (sendirian), tanpa Azan/Iqamah, bacaan suara <strong>Sirr</strong> (pelan).</p>
+                        </div>
+                    </div>
+
+                    <!-- Detailed 12 Rakaat Rawatib Breakdown -->
+                    <h4 class="font-heading font-bold text-base text-slate-800 mb-3">📌 Rincian Shalat Sunah Rawatib 5 Waktu:</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 mb-6">
+                        <div class="bg-emerald-50 border-2 border-emerald-300 p-3 rounded-2xl text-center">
+                            <span class="text-xs bg-emerald-600 text-white font-bold px-2.5 py-0.5 rounded-full">1. Subuh</span>
+                            <p class="text-xs font-bold text-emerald-900 mt-2">2 Rakaat Qabliyah</p>
+                            <p class="text-[10px] text-slate-500 mt-0.5">(Sebelum Subuh)</p>
+                            <span class="inline-block mt-2 text-[10px] bg-amber-100 text-amber-900 font-bold px-2 py-0.5 rounded-md">⭐ Mu'akkad</span>
+                            <p class="text-[9px] text-emerald-700 italic mt-1">"Lebih baik dari dunia dan seisinya"</p>
+                        </div>
+
+                        <div class="bg-emerald-50 border-2 border-emerald-300 p-3 rounded-2xl text-center">
+                            <span class="text-xs bg-emerald-600 text-white font-bold px-2.5 py-0.5 rounded-full">2. Zuhur</span>
+                            <p class="text-xs font-bold text-emerald-900 mt-2">2 / 4 Rakaat Qabliyah</p>
+                            <p class="text-xs font-bold text-emerald-900 mt-1">2 Rakaat Ba'diyah</p>
+                            <span class="inline-block mt-2 text-[10px] bg-amber-100 text-amber-900 font-bold px-2 py-0.5 rounded-md">⭐ Mu'akkad</span>
+                        </div>
+
+                        <div class="bg-slate-100 border-2 border-slate-300 p-3 rounded-2xl text-center opacity-90">
+                            <span class="text-xs bg-slate-600 text-white font-bold px-2.5 py-0.5 rounded-full">3. Asar</span>
+                            <p class="text-xs font-bold text-slate-800 mt-2">4 Rakaat Qabliyah</p>
+                            <p class="text-[10px] text-slate-500 mt-0.5">(Tidak ada Ba'diyah Asar)</p>
+                            <span class="inline-block mt-2 text-[10px] bg-slate-200 text-slate-700 font-bold px-2 py-0.5 rounded-md">Ghairu Mu'akkad</span>
+                        </div>
+
+                        <div class="bg-emerald-50 border-2 border-emerald-300 p-3 rounded-2xl text-center">
+                            <span class="text-xs bg-emerald-600 text-white font-bold px-2.5 py-0.5 rounded-full">4. Magrib</span>
+                            <p class="text-xs font-bold text-emerald-900 mt-2">2 Rakaat Ba'diyah</p>
+                            <p class="text-[10px] text-slate-500 mt-0.5">(Sesudah Magrib)</p>
+                            <span class="inline-block mt-2 text-[10px] bg-amber-100 text-amber-900 font-bold px-2 py-0.5 rounded-md">⭐ Mu'akkad</span>
+                        </div>
+
+                        <div class="bg-emerald-50 border-2 border-emerald-300 p-3 rounded-2xl text-center">
+                            <span class="text-xs bg-emerald-600 text-white font-bold px-2.5 py-0.5 rounded-full">5. Isya</span>
+                            <p class="text-xs font-bold text-emerald-900 mt-2">2 Rakaat Ba'diyah</p>
+                            <p class="text-[10px] text-slate-500 mt-0.5">(Sesudah Isya)</p>
+                            <span class="inline-block mt-2 text-[10px] bg-amber-100 text-amber-900 font-bold px-2 py-0.5 rounded-md">⭐ Mu'akkad</span>
+                        </div>
+                    </div>
+
+                    <!-- Niat Shalat Rawatib (Misi 5) -->
+                    <div class="bg-white border-2 border-emerald-200 rounded-2xl p-4 mb-6">
+                        <h4 class="font-heading font-bold text-emerald-800 text-sm mb-2 flex items-center space-x-2">
+                            <i class="fa-solid fa-hands-praying"></i>
+                            <span>Contoh Niat Shalat Sunah Rawatib (Misi 5):</span>
+                        </h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                            <div class="bg-emerald-50 p-3 rounded-xl border border-emerald-200">
+                                <p class="font-bold text-emerald-900 mb-1">Qabliyah Subuh (Sebelum Subuh):</p>
+                                <p class="font-serif text-slate-800 font-bold text-sm">أُصَلِّى سُنَّةَ الصُّبْحِ رَكْعَتَيْنِ قَبْلِيَّةً لِلّٰهِ تَعَالَى</p>
+                                <p class="italic text-slate-600 mt-1">"Ushallii sunnatash-shubhi rak'ataini qabliyyatan lillaahi ta'aalaa."</p>
+                            </div>
+                            <div class="bg-emerald-50 p-3 rounded-xl border border-emerald-200">
+                                <p class="font-bold text-emerald-900 mb-1">Ba'diyah Magrib (Sesudah Magrib):</p>
+                                <p class="font-serif text-slate-800 font-bold text-sm">أُصَلِّى سُنَّةَ الْمَغْرِبِ رَكْعَتَيْنِ بَعْدِيَّةً لِلّٰهِ تَعَالَى</p>
+                                <p class="italic text-slate-600 mt-1">"Ushallii sunnatal-maghribi rak'ataini ba'diyyatan lillaahi ta'aalaa."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mini Game Pasangkan -->
+                    <div class="bg-slate-50 border-2 border-slate-200 rounded-2xl p-5">
+                        <h4 class="font-heading font-bold text-base text-slate-800 mb-2">🎮 Mini Game: Pasangkan Rawatib & Waktunya!</h4>
+                        <p class="text-xs text-slate-600 mb-3">Shalat sunah 2 rakaat yang dilaksanakan <strong>SEBELUM Shalat Subuh</strong> disebut...</p>
+                        
+                        <div class="flex flex-wrap gap-2 justify-center">
+                            <button onclick="checkZone2Matching(this, false)" class="bg-white border-2 border-slate-300 hover:border-emerald-500 font-bold text-xs py-2 px-4 rounded-xl shadow-sm">
+                                Ba'diyah Subuh
+                            </button>
+                            <button onclick="checkZone2Matching(this, true)" class="bg-white border-2 border-slate-300 hover:border-emerald-500 font-bold text-xs py-2 px-4 rounded-xl shadow-sm">
+                                Qabliyah Subuh
+                            </button>
+                            <button onclick="checkZone2Matching(this, false)" class="bg-white border-2 border-slate-300 hover:border-emerald-500 font-bold text-xs py-2 px-4 rounded-xl shadow-sm">
+                                Ba'diyah Isya
+                            </button>
+                        </div>
+                        <div id="z2-feedback" class="mt-3 text-center text-xs font-bold hidden"></div>
+                    </div>
+                </div>
+
+                <!-- ZONA 3: Shalat Sunah Dhuha & Practical Steps (Misi 3 & Misi 5) -->
+                <div id="zone-content-3" class="zone-content hidden">
+                    <div class="bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-900 p-5 sm:p-6 rounded-2xl mb-6 shadow-md">
+                        <span class="bg-slate-900/20 text-slate-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">🎯 Misi 3 & Misi 5</span>
+                        <h3 class="font-heading text-2xl sm:text-3xl font-extrabold mt-1">Ketentuan & Tata Cara Shalat Dhuha</h3>
+                        <p class="text-slate-800 text-xs sm:text-sm mt-1">Shalat sunah pembuka pintu rezeki, pembawa ketenangan jiwa, dan sarana bersyukur di pagi hari.</p>
+                    </div>
+
+                    <!-- Overview Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                        <div class="bg-amber-50 border border-amber-200 p-4 rounded-2xl text-center">
+                            <div class="text-3xl mb-1">⏰</div>
+                            <h5 class="font-heading font-bold text-amber-800 text-sm">Waktu Pelaksanaan</h5>
+                            <p class="text-xs text-slate-700 mt-1">Matahari terbit setinggi tombak (sekitar pukul 07.00 WIB) hingga menjelang waktu Zuhur.</p>
+                        </div>
+
+                        <div class="bg-amber-50 border border-amber-200 p-4 rounded-2xl text-center">
+                            <div class="text-3xl mb-1">🔢</div>
+                            <h5 class="font-heading font-bold text-amber-800 text-sm">Jumlah Rakaat</h5>
+                            <p class="text-xs text-slate-700 mt-1">Sekurang-kurangnya 2 rakaat, maksimal 8 atau 12 rakaat (salam setiap 2 rakaat).</p>
+                        </div>
+
+                        <div class="bg-amber-50 border border-amber-200 p-4 rounded-2xl text-center">
+                            <div class="text-3xl mb-1">🤲</div>
+                            <h5 class="font-heading font-bold text-amber-800 text-sm">Keutamaan Utama</h5>
+                            <p class="text-xs text-slate-700 mt-1">Senilai dengan bersedekah untuk 360 persendian tubuh kita setiap harinya!</p>
+                        </div>
+                    </div>
+
+                    <!-- Niat & Tata Cara Shalat Dhuha (Misi 5) -->
+                    <div class="bg-white border-2 border-amber-300 rounded-2xl p-5 mb-6 shadow-sm">
+                        <h4 class="font-heading font-bold text-amber-900 text-base mb-3 flex items-center space-x-2">
+                            <i class="fa-solid fa-hands-praying text-amber-600"></i>
+                            <span>Lafal Niat & Panduan Praktik Tata Cara Shalat Dhuha (Misi 5):</span>
+                        </h4>
+
+                        <!-- Niat Box -->
+                        <div class="bg-amber-50 p-4 rounded-xl border border-amber-200 mb-4 text-center">
+                            <p class="text-xs text-amber-800 font-bold uppercase tracking-wider mb-1">Lafal Niat Shalat Dhuha:</p>
+                            <p class="text-lg sm:text-xl font-serif text-slate-800 font-bold mb-1">أُصَلِّى سُنَّةَ الضُّحَى رَكْعَتَيْنِ لِلّٰهِ تَعَالَى</p>
+                            <p class="text-xs text-slate-600 italic">"Ushallii sunnatadh-dhuhaa rak'ataini lillaahi ta'aalaa."</p>
+                            <p class="text-xs text-emerald-700 font-semibold mt-1">Artinya: "Aku berniat shalat sunah Dhuha dua rakaat karena Allah Ta'ala."</p>
+                        </div>
+
+                        <!-- 5 Steps Timeline -->
+                        <div class="grid grid-cols-1 sm:grid-cols-5 gap-2 text-center text-xs">
+                            <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-200">
+                                <span class="bg-amber-400 text-slate-900 font-bold px-2 py-0.5 rounded-full text-[10px]">Langkah 1</span>
+                                <p class="font-bold text-slate-800 mt-1">Niat & Takbir</p>
+                                <p class="text-[10px] text-slate-500">Membaca niat di hati disertai Takbiratul Ihram.</p>
+                            </div>
+                            <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-200">
+                                <span class="bg-amber-400 text-slate-900 font-bold px-2 py-0.5 rounded-full text-[10px]">Langkah 2</span>
+                                <p class="font-bold text-slate-800 mt-1">Membaca Surah</p>
+                                <p class="text-[10px] text-slate-500">Al-Fatihah dilanjutkan Surah Ad-Duha / Asy-Syams / Al-Kafirun.</p>
+                            </div>
+                            <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-200">
+                                <span class="bg-amber-400 text-slate-900 font-bold px-2 py-0.5 rounded-full text-[10px]">Langkah 3</span>
+                                <p class="font-bold text-slate-800 mt-1">Ruku' & Sujud</p>
+                                <p class="text-[10px] text-slate-500">Gerakan shalat dikerjakan tenang (Tuma'ninah).</p>
+                            </div>
+                            <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-200">
+                                <span class="bg-amber-400 text-slate-900 font-bold px-2 py-0.5 rounded-full text-[10px]">Langkah 4</span>
+                                <p class="font-bold text-slate-800 mt-1">Tahiyyat & Salam</p>
+                                <p class="text-[10px] text-slate-500">Mengucapkan salam pada rakaat kedua.</p>
+                            </div>
+                            <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-200">
+                                <span class="bg-amber-400 text-slate-900 font-bold px-2 py-0.5 rounded-full text-[10px]">Langkah 5</span>
+                                <p class="font-bold text-slate-800 mt-1">Berdoa</p>
+                                <p class="text-[10px] text-slate-500">Memohon keberkahan rezeki & ampunan Allah.</p>
+                            </div>
+                        </div>
+
+                        <!-- Doa Dhuha Toggle Button -->
+                        <div class="mt-4 text-center">
+                            <button onclick="toggleDoaDhuha()" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold px-4 py-2 rounded-xl text-xs transition shadow-sm">
+                                🤲 Klik untuk Menampilkan Bacaan Doa Setelah Shalat Dhuha
+                            </button>
+                            <div id="doa-dhuha-box" class="hidden mt-3 p-4 bg-amber-50 border border-amber-300 rounded-xl text-left text-xs">
+                                <p class="font-bold text-amber-900 mb-1">Doa Setelah Shalat Dhuha:</p>
+                                <p class="font-serif font-bold text-base text-slate-800">اَللّٰهُمَّ اِنَّ الضُّحَآءَ ضُحَآؤُكَ وَالْبَهَآءَ بَهَآؤُكَ وَالْجَمَالَ جَمَالُكَ وَالْقُوَّةَ قُوَّتُكَ وَالْقُدْرَةَ قُدْرَتُكَ وَالْعِصْمَةَ عِصْمَتُكَ</p>
+                                <p class="italic text-slate-600 mt-1 font-semibold">"Ya Allah, sesungguhnya waktu dhuha adalah waktu dhuha-Mu, keagungan adalah keagungan-Mu, keindahan adalah keindahan-Mu, kekuatan adalah kekuatan-Mu..."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mini Game: Jam Dhuha -->
+                    <div class="bg-amber-100 border-2 border-amber-300 rounded-2xl p-5 text-center">
+                        <h4 class="font-heading font-bold text-slate-800 text-base mb-1">⏰ Mini Game: "Kapan Waktu Shalat Dhuha?"</h4>
+                        <p class="text-xs text-slate-600 mb-4">Pilih jam pelaksanaan Shalat Dhuha yang tepat:</p>
+
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-lg mx-auto">
+                            <button onclick="checkClockDhuha(this, false)" class="bg-white border-2 border-amber-200 hover:bg-amber-200 font-bold p-3 rounded-2xl shadow-sm flex flex-col items-center">
+                                <span class="text-2xl mb-1">🌅</span>
+                                <span class="text-xs">05.00 WIB</span>
+                            </button>
+                            <button onclick="checkClockDhuha(this, true)" class="bg-white border-2 border-amber-200 hover:bg-amber-200 font-bold p-3 rounded-2xl shadow-sm flex flex-col items-center">
+                                <span class="text-2xl mb-1">☀️</span>
+                                <span class="text-xs">08.00 WIB</span>
+                            </button>
+                            <button onclick="checkClockDhuha(this, true)" class="bg-white border-2 border-amber-200 hover:bg-amber-200 font-bold p-3 rounded-2xl shadow-sm flex flex-col items-center">
+                                <span class="text-2xl mb-1">☀️</span>
+                                <span class="text-xs">10.00 WIB</span>
+                            </button>
+                            <button onclick="checkClockDhuha(this, false)" class="bg-white border-2 border-amber-200 hover:bg-amber-200 font-bold p-3 rounded-2xl shadow-sm flex flex-col items-center">
+                                <span class="text-2xl mb-1">🕌</span>
+                                <span class="text-xs">12.30 WIB</span>
+                            </button>
+                        </div>
+                        <div id="z3-feedback" class="mt-3 text-xs font-bold hidden"></div>
+                    </div>
+                </div>
+
+                <!-- ZONA 4: Shalat Sunah Tahajud & Pembiasaan Diri (Misi 4, Misi 5, & Misi 6) -->
+                <div id="zone-content-4" class="zone-content hidden">
+                    <div class="bg-gradient-to-r from-indigo-900 to-purple-900 text-white p-5 sm:p-6 rounded-2xl mb-6 shadow-md">
+                        <span class="bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">🎯 Misi 4, Misi 5, & Misi 6</span>
+                        <h3 class="font-heading text-2xl sm:text-3xl font-extrabold mt-1">Shalat Tahajud & Jurnal Pembiasaan</h3>
+                        <p class="text-indigo-200 text-xs sm:text-sm mt-1">Shalat sunah di malam hari untuk memohon kemuliaan derajat, ampunan, dan membiasakan ibadah mandiri.</p>
+                    </div>
+
+                    <!-- Overview Tahajud -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                        <div class="bg-indigo-900/10 border border-indigo-200 p-4 rounded-2xl text-center">
+                            <div class="text-3xl mb-1">🌌</div>
+                            <h5 class="font-heading font-bold text-indigo-900 text-sm">Waktu & Syarat Utama</h5>
+                            <p class="text-xs text-slate-700 mt-1">Malam hari setelah Isya dan <strong>WAJIB tidur terlebih dahulu</strong> walau hanya sejenak.</p>
+                        </div>
+
+                        <div class="bg-indigo-900/10 border border-indigo-200 p-4 rounded-2xl text-center">
+                            <div class="text-3xl mb-1">🔢</div>
+                            <h5 class="font-heading font-bold text-indigo-900 text-sm">Jumlah Rakaat</h5>
+                            <p class="text-xs text-slate-700 mt-1">Minimal 2 rakaat (salam setiap 2 rakaat) dan ditutup dengan Shalat Witir.</p>
+                        </div>
+
+                        <div class="bg-indigo-900/10 border border-indigo-200 p-4 rounded-2xl text-center">
+                            <div class="text-3xl mb-1">👑</div>
+                            <h5 class="font-heading font-bold text-indigo-900 text-sm">Keutamaan Derajat</h5>
+                            <p class="text-xs text-slate-700 mt-1">Allah Swt. menjanjikan tempat yang terpuji (<em>Maqaman Mahmuda</em> - QS. Al-Isra: 79).</p>
+                        </div>
+                    </div>
+
+                    <!-- 3 Sepertiga Malam Explanation -->
+                    <div class="bg-white border-2 border-indigo-200 p-4 rounded-2xl mb-6 shadow-sm">
+                        <h4 class="font-heading font-bold text-indigo-900 text-sm mb-3">🕒 Pembagian Waktu Malam Shalat Tahajud:</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                            <div class="bg-indigo-50 p-3 rounded-xl border border-indigo-200">
+                                <p class="font-bold text-indigo-900">1. Sepertiga Pertama</p>
+                                <p class="text-slate-600 mt-0.5">Mulai setelah Isya - pukul 22.00 WIB (Boleh dikerjakan).</p>
+                            </div>
+                            <div class="bg-indigo-50 p-3 rounded-xl border border-indigo-200">
+                                <p class="font-bold text-indigo-900">2. Sepertiga Kedua</p>
+                                <p class="text-slate-600 mt-0.5">Pukul 22.00 - 01.00 WIB (Sangat baik).</p>
+                            </div>
+                            <div class="bg-amber-50 p-3 rounded-xl border border-amber-300">
+                                <p class="font-bold text-amber-900">3. Sepertiga Terakhir ⭐</p>
+                                <p class="text-slate-700 mt-0.5 font-semibold">Pukul 01.00 - menjelang Subuh (WAKTU PALING UTAMA/AFDAL).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lafal Niat Tahajud Box (Misi 5) -->
+                    <div class="bg-indigo-950 text-white p-4 rounded-2xl border border-indigo-700 mb-6 text-center shadow">
+                        <p class="text-xs text-amber-300 font-bold uppercase tracking-wider mb-1">Lafal Niat Shalat Tahajud (Misi 5):</p>
+                        <p class="text-lg sm:text-xl font-serif font-bold mb-1">أُصَلِّى سُنَّةَ التَّهَجُّدِ رَكْعَتَيْنِ لِلّٰهِ تَعَالَى</p>
+                        <p class="text-xs text-indigo-200 italic">"Ushallii sunnatat-tahajjudi rak'ataini lillaahi ta'aalaa."</p>
+                        <p class="text-xs text-amber-200 font-semibold mt-1">Artinya: "Aku berniat shalat sunah Tahajud dua rakaat karena Allah Ta'ala."</p>
+                    </div>
+
+                    <!-- Misi 6: Interactive Daily Habit Tracker Simulator -->
+                    <div class="bg-emerald-50 border-2 border-emerald-300 rounded-2xl p-5 mb-6">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <span class="text-3xl">🗓️</span>
+                            <div>
+                                <h4 class="font-heading font-bold text-emerald-900 text-base">Jurnal Pembiasaan Ibadah Sunah Harian (Misi 6)</h4>
+                                <p class="text-xs text-slate-600">Mari simulasikan pembiasaan ibadahmu! Centang shalat sunah yang berniat kamu rutin kerjakan:</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                            <label class="flex items-center space-x-3 bg-white p-3 rounded-xl border border-emerald-200 cursor-pointer hover:bg-emerald-100/50 transition">
+                                <input type="checkbox" onchange="updateHabitTracker()" class="habit-check w-4 h-4 text-emerald-600 rounded">
+                                <span class="font-bold text-slate-800">🌅 Shalat Sunah Qabliyah Subuh</span>
+                            </label>
+                            <label class="flex items-center space-x-3 bg-white p-3 rounded-xl border border-emerald-200 cursor-pointer hover:bg-emerald-100/50 transition">
+                                <input type="checkbox" onchange="updateHabitTracker()" class="habit-check w-4 h-4 text-emerald-600 rounded">
+                                <span class="font-bold text-slate-800">☀️ Shalat Sunah Dhuha 2 Rakaat</span>
+                            </label>
+                            <label class="flex items-center space-x-3 bg-white p-3 rounded-xl border border-emerald-200 cursor-pointer hover:bg-emerald-100/50 transition">
+                                <input type="checkbox" onchange="updateHabitTracker()" class="habit-check w-4 h-4 text-emerald-600 rounded">
+                                <span class="font-bold text-slate-800">🌇 Shalat Sunah Ba'diyah Magrib / Isya</span>
+                            </label>
+                            <label class="flex items-center space-x-3 bg-white p-3 rounded-xl border border-emerald-200 cursor-pointer hover:bg-emerald-100/50 transition">
+                                <input type="checkbox" onchange="updateHabitTracker()" class="habit-check w-4 h-4 text-emerald-600 rounded">
+                                <span class="font-bold text-slate-800">🌙 Shalat Sunah Tahajud & Doa</span>
+                            </label>
+                        </div>
+
+                        <div id="habit-badge-display" class="mt-4 p-3 bg-white rounded-xl border border-emerald-300 text-center hidden animate-bounce">
+                            <span class="text-amber-500 font-extrabold text-sm">🏅 Lencana Diberikan: <span id="habit-badge-name">Penjelajah Istiqamah Muda!</span></span>
+                        </div>
+                    </div>
+
+                    <!-- Mini Game: Syarat Tahajud -->
+                    <div class="bg-indigo-950 text-white rounded-2xl p-5 text-center shadow-lg">
+                        <h4 class="font-heading font-bold text-amber-300 text-base mb-1">🌙 Mini Game: "Syarat Utama Shalat Tahajud"</h4>
+                        <p class="text-xs text-indigo-200 mb-4">Syarat utama sebelum mengerjakan shalat Tahajud di malam hari adalah...</p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-md mx-auto text-xs">
+                            <button onclick="checkTahajudTime(this, false)" class="bg-indigo-900 hover:bg-indigo-800 border border-indigo-700 p-3 rounded-xl font-bold text-white">
+                                A. Bermain game sampai larut malam
+                            </button>
+                            <button onclick="checkTahajudTime(this, true)" class="bg-indigo-900 hover:bg-indigo-800 border border-indigo-700 p-3 rounded-xl font-bold text-white">
+                                B. Tidur terlebih dahulu walau sebentar
+                            </button>
+                        </div>
+                        <div id="z4-feedback" class="mt-3 text-xs font-bold hidden"></div>
+                    </div>
+                </div>
+
+                <!-- Footer Nav in Materi -->
+                <div class="mt-6 flex justify-between border-t pt-4">
+                    <button onclick="navigateTo('tujuan')" class="text-slate-600 font-bold text-sm px-4 py-2 hover:text-slate-800">
+                        ← Kembali ke Tujuan
+                    </button>
+                    <button onclick="navigateTo('game')" class="btn-3d btn-yellow-3d text-slate-900 font-heading font-bold px-6 py-2.5 rounded-2xl flex items-center space-x-2">
+                        <span>Lanjut Main Game 🎮</span>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4. MENU GAME (PETUALANGAN 3 LEVEL) -->
+        <section id="screen-game" class="w-full hidden py-2">
+            <div class="glass-card rounded-3xl p-4 sm:p-6 max-w-4xl mx-auto shadow-2xl relative overflow-hidden">
+                
+                <!-- Game HUD Header -->
+                <div class="flex items-center justify-between border-b pb-3 mb-4">
+                    <div>
+                        <span id="game-level-badge" class="bg-amber-400 text-slate-900 font-extrabold text-xs px-3 py-1 rounded-full uppercase tracking-wider">
+                            Level 1: Rawatib Race 🕌
+                        </span>
+                        <h3 class="font-heading text-xl sm:text-2xl font-bold text-slate-800 mt-1">Misi Penjelajah Shalat Sunah</h3>
+                    </div>
+
+                    <!-- Lives, Score & Control Buttons -->
+                    <div class="flex items-center space-x-2 sm:space-x-3">
+                        <div class="flex items-center space-x-1" id="game-lives-container">
+                            <span class="text-red-500 text-xl">❤️</span>
+                            <span class="text-red-500 text-xl">❤️</span>
+                            <span class="text-red-500 text-xl">❤️</span>
+                        </div>
+                        <div class="bg-amber-100 border border-amber-300 text-amber-900 font-bold px-3 py-1 rounded-xl text-xs sm:text-sm flex items-center space-x-1">
+                            <span>⭐</span>
+                            <span id="game-score-display">0</span>
+                        </div>
+
+                        <!-- Home & Restart Action Buttons -->
+                        <button onclick="initGame()" class="w-9 h-9 rounded-xl bg-amber-400 hover:bg-amber-500 text-slate-900 shadow flex items-center justify-center transition border border-amber-300" title="Main Ulang Game">
+                            <i class="fa-solid fa-rotate-right"></i>
+                        </button>
+                        <button onclick="navigateTo('main-menu')" class="w-9 h-9 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white shadow flex items-center justify-center transition border border-emerald-400" title="Kembali ke Menu Utama">
+                            <i class="fa-solid fa-house"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Dynamic Visual Game Backdrop & Player Sprite -->
+                <div id="game-backdrop" class="w-full h-36 sm:h-44 rounded-2xl mb-4 relative overflow-hidden flex items-end px-6 pb-2 transition duration-500 bg-gradient-to-r from-teal-400 via-sky-400 to-emerald-400">
+                    
+                    <!-- Decorative Background Elements -->
+                    <div class="absolute top-2 right-4 text-4xl opacity-80" id="game-backdrop-icon">🕌</div>
+                    
+                    <!-- Progress Pathway -->
+                    <div class="w-full h-3 bg-white/40 rounded-full mb-3 relative">
+                        <div id="game-progress-bar" class="h-full bg-amber-400 rounded-full w-0 transition-all duration-500"></div>
+                    </div>
+
+                    <!-- Player Sprite Avatar -->
+                    <div id="game-player-sprite" class="absolute bottom-4 left-6 transition-all duration-500 text-4xl transform -scale-x-100 hover:-scale-x-110">
+                        🏃🏻‍♂️
+                    </div>
+                </div>
+
+                <!-- Game Question Area -->
+                <div id="game-question-card" class="bg-white p-5 rounded-2xl border-2 border-slate-200 shadow-sm mb-4">
+                    <span id="game-question-num" class="text-xs font-bold text-cyan-600 uppercase">Pertanyaan Level 1</span>
+                    <h4 id="game-question-text" class="font-heading font-bold text-base sm:text-lg text-slate-800 mt-1 mb-4">
+                        Loading soal game...
+                    </h4>
+
+                    <!-- Options Grid -->
+                    <div id="game-options-container" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <!-- Dynamic Options rendered by JS -->
+                    </div>
+                </div>
+
+                <!-- Game Feedback Banner -->
+                <div id="game-feedback-banner" class="hidden p-4 rounded-2xl text-center font-heading font-bold text-sm"></div>
+
+            </div>
+        </section>
+
+        <!-- 5. MENU EVALUASI -->
+        <section id="screen-evaluasi" class="w-full hidden py-2">
+            <div class="glass-card rounded-3xl p-4 sm:p-6 max-w-4xl mx-auto shadow-2xl">
+                
+                <!-- Evaluasi Header -->
+                <div id="eval-header" class="flex items-center justify-between border-b pb-3 mb-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-xl bg-purple-500 text-white flex items-center justify-center text-xl shadow">
+                            <i class="fa-solid fa-clipboard-check"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading text-xl sm:text-2xl font-bold text-slate-800">Evaluasi Akhir</h3>
+                            <p class="text-xs text-slate-500">10 Soal Pilihan Ganda</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-purple-100 text-purple-800 font-bold px-3 py-1 rounded-xl text-xs">
+                        Soal <span id="eval-current-num">1</span> dari 10
+                    </div>
+                </div>
+
+                <!-- Quiz Progress Bar -->
+                <div class="w-full bg-slate-200 rounded-full h-2.5 mb-6 overflow-hidden">
+                    <div id="eval-progress-bar" class="bg-purple-600 h-2.5 rounded-full w-10 transition-all duration-300"></div>
+                </div>
+
+                <!-- Question Card -->
+                <div id="eval-question-box" class="bg-white p-6 rounded-2xl border-2 border-slate-200 shadow-sm mb-6">
+                    <h4 id="eval-question-text" class="font-heading font-bold text-lg text-slate-800 mb-6">
+                        Shalat sunah adalah shalat yang...
+                    </h4>
+
+                    <div id="eval-options-list" class="space-y-3">
+                        <!-- Options generated by JS -->
+                    </div>
+                </div>
+
+                <!-- Navigation Controls -->
+                <div id="eval-controls" class="flex justify-end">
+                    <button id="btn-next-eval" onclick="nextEvaluasiQuestion()" class="btn-3d btn-purple-3d text-white font-heading font-bold px-6 py-2.5 rounded-2xl hidden flex items-center space-x-2">
+                        <span>Soal Berikutnya</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- RESULT / CERTIFICATE SCREEN (Initially Hidden) -->
+                <div id="eval-result-card" class="hidden text-center py-4">
+                    <div class="cert-border bg-amber-50 p-6 rounded-3xl shadow-2xl max-w-2xl mx-auto relative overflow-hidden">
+                        
+                        <div class="text-5xl mb-2 animate-bounce">🎉</div>
+                        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-amber-900">ALHAMDULILLAH!</h2>
+                        <p class="text-xs sm:text-sm font-bold text-amber-800 uppercase tracking-widest mt-1 mb-4">Sertifikat Penjelajah Shalat Sunah</p>
+
+                        <div class="bg-white p-4 rounded-2xl border border-amber-200 max-w-xs mx-auto mb-4 shadow-inner">
+                            <span class="text-xs text-slate-500 font-semibold">SKOR AKHIR KAMU</span>
+                            <div id="eval-final-score" class="font-heading text-5xl font-black text-amber-500 my-1">90</div>
+                            <div id="eval-stars-display" class="text-2xl text-amber-400">⭐⭐⭐⭐⭐</div>
+                        </div>
+
+                        <div id="eval-feedback-text" class="text-sm font-bold text-slate-700 max-w-md mx-auto mb-6">
+                            "Hebat! Kamu sudah memahami shalat sunah dengan sangat baik."
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="flex flex-wrap justify-center gap-3">
+                            <button onclick="restartEvaluasi()" class="btn-3d btn-purple-3d text-white font-heading font-bold px-5 py-2.5 rounded-2xl text-xs sm:text-sm">
+                                🔄 Ulangi Evaluasi
+                            </button>
+                            <button onclick="navigateTo('game')" class="btn-3d btn-yellow-3d text-slate-900 font-heading font-bold px-5 py-2.5 rounded-2xl text-xs sm:text-sm">
+                                🎮 Main Game Lagi
+                            </button>
+                            <button onclick="navigateTo('main-menu')" class="btn-3d btn-green-3d text-white font-heading font-bold px-5 py-2.5 rounded-2xl text-xs sm:text-sm">
+                                🏠 Kembali ke Menu
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PETUNJUK MODAL -->
+    <div id="modal-petunjuk" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl p-6 max-w-md w-full shadow-2xl border-4 border-amber-400 transform transition-all">
+            <div class="flex justify-between items-center border-b pb-3 mb-4">
+                <h3 class="font-heading font-bold text-xl text-slate-800 flex items-center space-x-2">
+                    <span class="text-amber-500">ℹ️</span>
+                    <span>Petunjuk Penggunaan</span>
+                </h3>
+                <button onclick="closeModal('modal-petunjuk')" class="text-slate-400 hover:text-slate-600 text-xl font-bold">✕</button>
+            </div>
+
+            <div class="space-y-3 text-xs sm:text-sm text-slate-700 font-medium">
+                <p>1. 🎯 <strong>Menu Tujuan:</strong> Pelajari 6 misi utama pembelajaran. Klik setiap kartu misi.</p>
+                <p>2. 📚 <strong>Menu Materi:</strong> Jelajahi 4 Zona interaktif dan jawab mini game sederhana.</p>
+                <p>3. 🎮 <strong>Menu Game:</strong> Mainkan 3 Level petualangan, kumpulkan poin dan jaga nyawa!</p>
+                <p>4. 📝 <strong>Menu Evaluasi:</strong> Jawab 10 soal pilihan ganda untuk melihat nilai & sertifikatmu.</p>
+                <p>5. 🔊 Gunakan tombol musik/suara di kanan atas untuk mengaktifkan/menonaktifkan efek suara.</p>
+            </div>
+
+            <div class="mt-6 text-center">
+                <button onclick="closeModal('modal-petunjuk')" class="btn-3d btn-yellow-3d font-heading font-bold px-6 py-2 rounded-xl text-slate-900 text-sm">
+                    Saya Mengerti 👍
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /* ===================================================
+           1. WEB AUDIO API SYNTHESIZER (No external URL dependency)
+           =================================================== */
+        let audioCtx = null;
+        let isBgmOn = false;
+        let isSfxOn = true;
+        let bgmInterval = null;
+
+        function initAudioContext() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+        }
+
+        // Play synthetic sound effect
+        function playAudio(type) {
+            if (!isSfxOn) return;
+            initAudioContext();
+            if (!audioCtx) return;
+
+            const now = audioCtx.currentTime;
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            if (type === 'sound-click') {
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(600, now);
+                osc.frequency.exponentialRampToValueAtTime(800, now + 0.08);
+                gain.gain.setValueAtTime(0.15, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + 0.08);
+                osc.start(now);
+                osc.stop(now + 0.08);
+            } else if (type === 'sound-correct') {
+                osc.type = 'triangle';
+                osc.frequency.setValueAtTime(523.25, now); // C5
+                osc.frequency.setValueAtTime(659.25, now + 0.1); // E5
+                osc.frequency.setValueAtTime(783.99, now + 0.2); // G5
+                gain.gain.setValueAtTime(0.2, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + 0.35);
+                osc.start(now);
+                osc.stop(now + 0.35);
+            } else if (type === 'sound-wrong') {
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(220, now); // A3
+                osc.frequency.setValueAtTime(164.81, now + 0.15); // E3
+                gain.gain.setValueAtTime(0.2, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
+                osc.start(now);
+                osc.stop(now + 0.3);
+            } else if (type === 'sound-star') {
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(880, now);
+                osc.frequency.exponentialRampToValueAtTime(1760, now + 0.25);
+                gain.gain.setValueAtTime(0.2, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + 0.25);
+                osc.start(now);
+                osc.stop(now + 0.25);
+            } else if (type === 'sound-start') {
+                osc.type = 'triangle';
+                osc.frequency.setValueAtTime(440, now);
+                osc.frequency.setValueAtTime(880, now + 0.15);
+                gain.gain.setValueAtTime(0.2, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
+                osc.start(now);
+                osc.stop(now + 0.3);
+            }
+        }
+
+        // Toggle BGM
+        function toggleBGM() {
+            initAudioContext();
+            isBgmOn = !isBgmOn;
+            const bgmBtn = document.getElementById('btn-sound-bgm');
+            const bgmIcon = document.getElementById('icon-bgm');
+
+            if (isBgmOn) {
+                bgmBtn.classList.add('bg-cyan-100');
+                bgmIcon.className = 'fa-solid fa-music text-cyan-600 animate-pulse';
+                startBGM();
+            } else {
+                bgmBtn.classList.remove('bg-cyan-100');
+                bgmIcon.className = 'fa-solid fa-music-slash text-slate-400';
+                stopBGM();
+            }
+        }
+
+        function startBGM() {
+            if (bgmInterval) clearInterval(bgmInterval);
+            const notes = [261.63, 293.66, 329.63, 392.00, 440.00]; // Pentatonic melody C D E G A
+            let idx = 0;
+            bgmInterval = setInterval(() => {
+                if (!isBgmOn || !audioCtx) return;
+                const now = audioCtx.currentTime;
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(notes[idx % notes.length], now);
+                gain.gain.setValueAtTime(0.03, now);
+                gain.gain.exponentialRampToValueAtTime(0.001, now + 0.4);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start(now);
+                osc.stop(now + 0.4);
+                idx++;
+            }, 500);
+        }
+
+        function stopBGM() {
+            if (bgmInterval) {
+                clearInterval(bgmInterval);
+                bgmInterval = null;
+            }
+        }
+
+        // Toggle SFX
+        function toggleSFX() {
+            isSfxOn = !isSfxOn;
+            const sfxBtn = document.getElementById('btn-sound-sfx');
+            const sfxIcon = document.getElementById('icon-sfx');
+
+            if (isSfxOn) {
+                sfxBtn.classList.add('bg-emerald-100');
+                sfxIcon.className = 'fa-solid fa-volume-high text-emerald-600';
+                playAudio('sound-click');
+            } else {
+                sfxBtn.classList.remove('bg-emerald-100');
+                sfxIcon.className = 'fa-solid fa-volume-xmark text-slate-400';
+            }
+        }
+
+        /* ===================================================
+           2. NAVIGATION & SCREEN CONTROLLER
+           =================================================== */
+        const screens = ['splash', 'main-menu', 'tujuan', 'materi', 'game', 'evaluasi'];
+
+        function navigateTo(screenId) {
+            playAudio('sound-click');
+            screens.forEach(s => {
+                const el = document.getElementById(`screen-${s}`);
+                if (el) el.classList.add('hidden');
+            });
+
+            const target = document.getElementById(`screen-${screenId}`);
+            if (target) target.classList.remove('hidden');
+
+            const homeBtn = document.getElementById('nav-btn-home');
+            if (screenId === 'splash' || screenId === 'main-menu') {
+                homeBtn.classList.add('hidden');
+            } else {
+                homeBtn.classList.remove('hidden');
+            }
+
+            // Screen Specific Actions
+            if (screenId === 'game') {
+                initGame();
+            } else if (screenId === 'evaluasi') {
+                initEvaluasi();
+            }
+        }
+
+        function openModal(modalId) {
+            playAudio('sound-click');
+            document.getElementById(modalId).classList.remove('hidden');
+        }
+
+        function closeModal(modalId) {
+            playAudio('sound-click');
+            document.getElementById(modalId).classList.add('hidden');
+        }
+
+        /* ===================================================
+           3. MENU 1: TUJUAN PEMBELAJARAN LOGIC
+           =================================================== */
+        let completedMisiSet = new Set();
+
+        function completeMisi(cardEl) {
+            const star = cardEl.querySelector('.misi-star');
+            if (!star) return;
+
+            if (!cardEl.classList.contains('border-emerald-500')) {
+                cardEl.classList.add('border-emerald-500', 'bg-emerald-50');
+                star.className = 'misi-star fa-solid fa-star text-amber-400 text-xl ml-auto animate-bounce';
+                completedMisiSet.add(cardEl);
+                playAudio('sound-star');
+            }
+
+            document.getElementById('completed-misi-count').innerText = completedMisiSet.size;
+        }
+
+        /* ===================================================
+           4. MENU 2: MATERI ZONE LOGIC & MINI GAMES
+           =================================================== */
+        function switchZone(zoneNum) {
+            playAudio('sound-click');
+            for (let i = 1; i <= 4; i++) {
+                const tab = document.getElementById(`tab-zone-${i}`);
+                const content = document.getElementById(`zone-content-${i}`);
+                if (i === zoneNum) {
+                    tab.className = 'zone-tab font-heading font-bold text-xs sm:text-sm py-2.5 px-3 rounded-xl transition flex items-center justify-center space-x-1.5 bg-cyan-500 text-white shadow';
+                    content.classList.remove('hidden');
+                } else {
+                    tab.className = 'zone-tab font-heading font-bold text-xs sm:text-sm py-2.5 px-3 rounded-xl transition flex items-center justify-center space-x-1.5 text-slate-600 hover:bg-slate-200';
+                    content.classList.add('hidden');
+                }
+            }
+        }
+
+        // Zone 1 Quiz
+        function checkZone1Answer(isWajib) {
+            const fb = document.getElementById('z1-quiz-feedback');
+            fb.classList.remove('hidden');
+            if (!isWajib) {
+                fb.className = 'mt-3 font-bold text-sm text-emerald-600 animate-bounce';
+                fb.innerText = '✅ Benar sekali! Shalat sunah dianjurkan (tidak wajib). Pilihan hebat!';
+                playAudio('sound-correct');
+            } else {
+                fb.className = 'mt-3 font-bold text-sm text-red-500';
+                fb.innerText = '❌ Kurang tepat. Shalat sunah tidak wajib, melainkan dianjurkan!';
+                playAudio('sound-wrong');
+            }
+        }
+
+        function checkZone1Reflect(isCorrect) {
+            const fb = document.getElementById('z1-quiz-feedback');
+            fb.classList.remove('hidden');
+            if (isCorrect) {
+                fb.className = 'mt-3 font-bold text-xs text-emerald-600 animate-bounce';
+                fb.innerText = '🌟 Tepat Sekali! Shalat sunah melengkapi kekurangan shalat fardu kita dan menambah pahala.';
+                playAudio('sound-correct');
+            } else {
+                fb.className = 'mt-3 font-bold text-xs text-red-500';
+                fb.innerText = '❌ Coba pikirkan kembali hikmah utama beribadah karena Allah Swt.';
+                playAudio('sound-wrong');
+            }
+        }
+
+        function toggleDoaDhuha() {
+            playAudio('sound-click');
+            const box = document.getElementById('doa-dhuha-box');
+            if (box) {
+                box.classList.toggle('hidden');
+            }
+        }
+
+        function updateHabitTracker() {
+            const checkboxes = document.querySelectorAll('.habit-check:checked');
+            const badgeBox = document.getElementById('habit-badge-display');
+            const badgeName = document.getElementById('habit-badge-name');
+
+            if (checkboxes.length > 0) {
+                badgeBox.classList.remove('hidden');
+                playAudio('sound-star');
+                if (checkboxes.length === 1) badgeName.innerText = 'Bintang Ibadah Pemula! ⭐';
+                else if (checkboxes.length === 2) badgeName.innerText = 'Penjelajah Rajin! ⭐⭐';
+                else if (checkboxes.length === 3) badgeName.innerText = 'Pejuang Sunah Hebat! ⭐⭐⭐';
+                else if (checkboxes.length === 4) badgeName.innerText = 'Sahabat Istiqamah Sejati! 🌟⭐🏆';
+            } else {
+                badgeBox.classList.add('hidden');
+            }
+        }
+
+        // Zone 2 Matching
+        function checkZone2Matching(btn, isCorrect) {
+            const fb = document.getElementById('z2-feedback');
+            fb.classList.remove('hidden');
+            if (isCorrect) {
+                fb.className = 'mt-3 text-center text-xs font-bold text-emerald-600';
+                fb.innerText = '🎉 Tepat! Shalat Magrib memiliki 2 Rakaat Rawatib sesudahnya!';
+                playAudio('sound-correct');
+            } else {
+                fb.className = 'mt-3 text-center text-xs font-bold text-red-500';
+                fb.innerText = 'Coba lagi! Ingat, Magrib ada Rawatib sesudahnya.';
+                playAudio('sound-wrong');
+            }
+        }
+
+        // Zone 3 Clock Dhuha
+        function checkClockDhuha(btn, isCorrect) {
+            const fb = document.getElementById('z3-feedback');
+            fb.classList.remove('hidden');
+            if (isCorrect) {
+                fb.className = 'mt-3 text-xs font-bold text-emerald-600';
+                fb.innerText = '✨ Benar! Waktu Dhuha adalah setelah matahari meninggi hingga sebelum Zuhur.';
+                playAudio('sound-correct');
+            } else {
+                fb.className = 'mt-3 text-xs font-bold text-red-500';
+                fb.innerText = '❌ Waktu tersebut belum atau sudah lewat waktu Dhuha!';
+                playAudio('sound-wrong');
+            }
+        }
+
+        // Zone 4 Tahajud Time
+        function checkTahajudTime(btn, isCorrect) {
+            const fb = document.getElementById('z4-feedback');
+            fb.classList.remove('hidden');
+            if (isCorrect) {
+                fb.className = 'mt-3 text-xs font-bold text-emerald-400';
+                fb.innerText = '🌟 Tepat! Shalat Tahajud dikerjakan di malam hari SETELAH tidur!';
+                playAudio('sound-correct');
+            } else {
+                fb.className = 'mt-3 text-xs font-bold text-red-400';
+                fb.innerText = '❌ Ingat, syarat Shalat Tahajud harus tidur terlebih dahulu!';
+                playAudio('sound-wrong');
+            }
+        }
+
+        /* ===================================================
+           5. MENU 3: GAME PETUALANGAN (3 LEVEL ENGINE)
+           =================================================== */
+        const gameQuestions = [
+            // Level 1: Rawatib
+            {
+                level: 1,
+                badge: 'Level 1: Rawatib Race 🕌',
+                backdropClass: 'bg-gradient-to-r from-teal-400 via-sky-400 to-emerald-400',
+                icon: '🕌',
+                question: 'Shalat sunah yang dilaksanakan sebelum atau sesudah shalat fardu disebut...',
+                options: ['A. Shalat Dhuha', 'B. Shalat Rawatib', 'C. Shalat Tahajud', 'D. Shalat Witir'],
+                correct: 1
+            },
+            // Level 2: Dhuha
+            {
+                level: 2,
+                badge: 'Level 2: Dhuha Challenge ☀️',
+                backdropClass: 'bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-300',
+                icon: '☀️',
+                question: 'Shalat Dhuha dilaksanakan pada waktu...',
+                options: ['A. Malam hari setelah Isya', 'B. Setelah matahari terbit hingga sebelum Zuhur', 'C. Setelah Magrib', 'D. Sebelum matahari terbit'],
+                correct: 1
+            },
+            // Level 3: Tahajud
+            {
+                level: 3,
+                badge: 'Level 3: Tahajud Night Mission 🌙',
+                backdropClass: 'bg-gradient-to-r from-indigo-900 via-purple-900 to-slate-900',
+                icon: '🌙',
+                question: 'Syarat utama sebelum melaksanakan Shalat Tahajud di malam hari adalah...',
+                options: ['A. Tidur terlebih dahulu', 'B. Bermain bersama teman', 'C. Olahraga malam', 'D. Makan malam'],
+                correct: 0
+            }
+        ];
+
+        let gameState = {
+            levelIndex: 0,
+            score: 0,
+            lives: 3,
+            completed: false
+        };
+
+        function initGame() {
+            playAudio('sound-click');
+            gameState.levelIndex = 0;
+            gameState.score = 0;
+            gameState.lives = 3;
+            gameState.completed = false;
+
+            const card = document.getElementById('game-question-card');
+            if (card) {
+                card.innerHTML = `
+                    <span id="game-question-num" class="text-xs font-bold text-cyan-600 uppercase">Pertanyaan Level 1</span>
+                    <h4 id="game-question-text" class="font-heading font-bold text-base sm:text-lg text-slate-800 mt-1 mb-4">
+                        Loading soal game...
+                    </h4>
+                    <div id="game-options-container" class="grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
+                `;
+            }
+
+            renderGameLevel();
+        }
+
+        function renderGameLevel() {
+            const q = gameQuestions[gameState.levelIndex];
+            if (!q) {
+                finishGame();
+                return;
+            }
+
+            // HUD Update
+            document.getElementById('game-level-badge').innerText = q.badge;
+            document.getElementById('game-score-display').innerText = gameState.score;
+            
+            // Render Lives
+            let livesHtml = '';
+            for (let i = 0; i < 3; i++) {
+                if (i < gameState.lives) {
+                    livesHtml += '<span class="text-red-500 text-xl">❤️</span>';
+                } else {
+                    livesHtml += '<span class="text-slate-300 text-xl">🖤</span>';
+                }
+            }
+            document.getElementById('game-lives-container').innerHTML = livesHtml;
+
+            // Backdrop
+            const backdrop = document.getElementById('game-backdrop');
+            backdrop.className = `w-full h-36 sm:h-44 rounded-2xl mb-4 relative overflow-hidden flex items-end px-6 pb-2 transition duration-500 ${q.backdropClass}`;
+            document.getElementById('game-backdrop-icon').innerText = q.icon;
+
+            // Player position
+            const progress = (gameState.levelIndex / gameQuestions.length) * 100;
+            document.getElementById('game-progress-bar').style.width = `${progress}%`;
+            document.getElementById('game-player-sprite').style.left = `${10 + (gameState.levelIndex * 35)}%`;
+
+            // Question
+            document.getElementById('game-question-num').innerText = `Pertanyaan Level ${gameState.levelIndex + 1}`;
+            document.getElementById('game-question-text').innerText = q.question;
+
+            // Options
+            const container = document.getElementById('game-options-container');
+            container.innerHTML = '';
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = 'bg-slate-50 hover:bg-cyan-50 border-2 border-slate-200 hover:border-cyan-400 p-3.5 rounded-2xl text-left font-bold text-xs sm:text-sm text-slate-700 shadow-sm transition flex items-center justify-between';
+                btn.innerHTML = `<span>${opt}</span><i class="fa-regular fa-circle text-slate-300"></i>`;
+                btn.onclick = () => handleGameAnswer(idx);
+                container.appendChild(btn);
+            });
+
+            document.getElementById('game-feedback-banner').className = 'hidden p-4 rounded-2xl text-center font-heading font-bold text-sm';
+        }
+
+        function handleGameAnswer(selectedIdx) {
+            const q = gameQuestions[gameState.levelIndex];
+            const banner = document.getElementById('game-feedback-banner');
+            banner.classList.remove('hidden');
+
+            if (selectedIdx === q.correct) {
+                gameState.score += 10;
+                playAudio('sound-correct');
+                banner.className = 'p-4 rounded-2xl text-center font-heading font-bold text-sm bg-emerald-100 text-emerald-800 border border-emerald-300 mb-2';
+                banner.innerText = '⭐ Jawaban Benar! +10 Poin. Meluncur ke level berikutnya!';
+                
+                setTimeout(() => {
+                    gameState.levelIndex++;
+                    if (gameState.levelIndex < gameQuestions.length) {
+                        renderGameLevel();
+                    } else {
+                        finishGame();
+                    }
+                }, 1200);
+
+            } else {
+                gameState.lives--;
+                playAudio('sound-wrong');
+                banner.className = 'p-4 rounded-2xl text-center font-heading font-bold text-sm bg-red-100 text-red-800 border border-red-300 mb-2';
+                banner.innerText = '❌ Jawaban Kurang Tepat! Ingat kembali materi shalat sunah.';
+
+                if (gameState.lives <= 0) {
+                    setTimeout(() => {
+                        finishGame();
+                    }, 1200);
+                } else {
+                    renderGameLevel();
+                }
+            }
+        }
+
+        function finishGame() {
+            let title = '';
+            if (gameState.score >= 30) {
+                title = '🌟 Penjelajah Ibadah Hebat!';
+            } else if (gameState.score >= 20) {
+                title = '🌟 Penjelajah Cerdas!';
+            } else {
+                title = '🌟 Penjelajah Semangat! Ayo coba lagi!';
+            }
+
+            const container = document.getElementById('game-question-card');
+            container.innerHTML = `
+                <div class="text-center py-6">
+                    <div class="text-5xl mb-2">🏆</div>
+                    <h3 class="font-heading text-2xl font-bold text-slate-800 mb-1">${title}</h3>
+                    <p class="text-sm text-slate-600 mb-6">Skor Akhir Game Kamu: <strong class="text-amber-500 font-extrabold text-lg">${gameState.score} Poin</strong></p>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <button onclick="initGame()" class="btn-3d btn-yellow-3d text-slate-900 font-heading font-bold px-6 py-2.5 rounded-2xl flex items-center space-x-2">
+                            <i class="fa-solid fa-rotate-right"></i>
+                            <span>Main Ulang Game</span>
+                        </button>
+                        <button onclick="navigateTo('main-menu')" class="btn-3d btn-green-3d text-white font-heading font-bold px-6 py-2.5 rounded-2xl flex items-center space-x-2">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Kembali ke Menu Utama</span>
+                        </button>
+                    </div>
+                </div>
+            `;
+            const optionsContainer = document.getElementById('game-options-container');
+            if (optionsContainer) optionsContainer.innerHTML = '';
+            const feedbackBanner = document.getElementById('game-feedback-banner');
+            if (feedbackBanner) feedbackBanner.classList.add('hidden');
+        }
+
+        /* ===================================================
+           6. MENU 4: EVALUASI (10 SOAL) LOGIC
+           =================================================== */
+        const evalQuestions = [
+            {
+                q: "1. Shalat sunah adalah shalat yang...",
+                opts: ["A. wajib dilakukan setiap hari", "B. dianjurkan untuk dilakukan", "C. tidak boleh dilakukan", "D. hanya dilakukan saat Ramadan"],
+                correct: 1
+            },
+            {
+                q: "2. Shalat Rawatib berkaitan erat dengan shalat...",
+                opts: ["A. fardu", "B. Id", "C. Jumat saja", "D. jenazah"],
+                correct: 0
+            },
+            {
+                q: "3. Shalat Dhuha dilaksanakan pada...",
+                opts: ["A. malam hari", "B. pagi hingga sebelum Zuhur", "C. setelah Magrib", "D. setelah Isya"],
+                correct: 1
+            },
+            {
+                q: "4. Minimal jumlah rakaat shalat Dhuha adalah...",
+                opts: ["A. 1 rakaat", "B. 2 rakaat", "C. 3 rakaat", "D. 4 rakaat"],
+                correct: 1
+            },
+            {
+                q: "5. Shalat Tahajud dilaksanakan pada...",
+                opts: ["A. pagi hari", "B. siang hari", "C. malam hari setelah tidur", "D. sebelum Magrib"],
+                correct: 2
+            },
+            {
+                q: "6. Minimal jumlah rakaat shalat Tahajud adalah...",
+                opts: ["A. 1 rakaat", "B. 2 rakaat", "C. 3 rakaat", "D. 4 rakaat"],
+                correct: 1
+            },
+            {
+                q: "7. Contoh shalat sunah Rawatib adalah...",
+                opts: ["A. shalat dua rakaat setelah Magrib", "B. shalat Idul Fitri", "C. shalat jenazah", "D. shalat Jumat"],
+                correct: 0
+            },
+            {
+                q: "8. Salah satu tujuan utama melaksanakan shalat sunah adalah...",
+                opts: ["A. mencari pujian teman", "B. mendekatkan diri kepada Allah Swt.", "C. mendapatkan hadiah uang", "D. pamer ibadah"],
+                correct: 1
+            },
+            {
+                q: "9. Jika kita ingin melaksanakan shalat Tahajud, sebaiknya kita...",
+                opts: ["A. tidur terlebih dahulu kemudian bangun untuk shalat", "B. bermain sampai pagi", "C. tidur setelah Subuh", "D. meninggalkan shalat Isya"],
+                correct: 0
+            },
+            {
+                q: "10. Sikap yang sebaiknya dibiasakan setelah mempelajari shalat sunah adalah...",
+                opts: ["A. malas beribadah", "B. membiasakan melaksanakan shalat sunah", "C. meninggalkan shalat fardu", "D. hanya beribadah ketika diperintah"],
+                correct: 1
+            }
+        ];
+
+        let evalState = {
+            currentIndex: 0,
+            answers: new Array(10).fill(null),
+            score: 0
+        };
+
+        function initEvaluasi() {
+            evalState.currentIndex = 0;
+            evalState.answers = new Array(10).fill(null);
+            evalState.score = 0;
+
+            document.getElementById('eval-header').classList.remove('hidden');
+            document.getElementById('eval-question-box').classList.remove('hidden');
+            document.getElementById('eval-controls').classList.remove('hidden');
+            document.getElementById('eval-result-card').classList.add('hidden');
+
+            renderEvaluasiQuestion();
+        }
+
+        function renderEvaluasiQuestion() {
+            const idx = evalState.currentIndex;
+            const q = evalQuestions[idx];
+
+            document.getElementById('eval-current-num').innerText = idx + 1;
+            document.getElementById('eval-progress-bar').style.width = `${((idx + 1) / 10) * 100}%`;
+            document.getElementById('eval-question-text').innerText = q.q;
+
+            const list = document.getElementById('eval-options-list');
+            list.innerHTML = '';
+
+            q.opts.forEach((opt, oIdx) => {
+                const btn = document.createElement('button');
+                const isSelected = evalState.answers[idx] === oIdx;
+
+                btn.className = `w-full text-left p-4 rounded-2xl border-2 font-semibold text-xs sm:text-sm transition flex items-center justify-between ${
+                    isSelected ? 'border-purple-500 bg-purple-50 text-purple-900 shadow' : 'border-slate-200 hover:border-purple-300 bg-white text-slate-700'
+                }`;
+
+                btn.innerHTML = `
+                    <span>${opt}</span>
+                    <i class="${isSelected ? 'fa-solid fa-circle-check text-purple-600' : 'fa-regular fa-circle text-slate-300'} text-lg"></i>
+                `;
+
+                btn.onclick = () => selectEvaluasiOption(oIdx);
+                list.appendChild(btn);
+            });
+
+            const nextBtn = document.getElementById('btn-next-eval');
+            if (evalState.answers[idx] !== null) {
+                nextBtn.classList.remove('hidden');
+            } else {
+                nextBtn.classList.add('hidden');
+            }
+        }
+
+        function selectEvaluasiOption(optionIdx) {
+            playAudio('sound-click');
+            evalState.answers[evalState.currentIndex] = optionIdx;
+            renderEvaluasiQuestion();
+        }
+
+        function nextEvaluasiQuestion() {
+            playAudio('sound-click');
+            if (evalState.currentIndex < evalQuestions.length - 1) {
+                evalState.currentIndex++;
+                renderEvaluasiQuestion();
+            } else {
+                calculateEvaluasiResult();
+            }
+        }
+
+        function calculateEvaluasiResult() {
+            let correctCount = 0;
+            evalQuestions.forEach((q, i) => {
+                if (evalState.answers[i] === q.correct) {
+                    correctCount++;
+                }
+            });
+
+            const finalScore = correctCount * 10;
+            evalState.score = finalScore;
+
+            // Hide Question Box, Show Certificate
+            document.getElementById('eval-header').classList.add('hidden');
+            document.getElementById('eval-question-box').classList.add('hidden');
+            document.getElementById('eval-controls').classList.add('hidden');
+            document.getElementById('eval-result-card').classList.remove('hidden');
+
+            document.getElementById('eval-final-score').innerText = finalScore;
+
+            // Feedback & Stars
+            const stars = document.getElementById('eval-stars-display');
+            const feedbackText = document.getElementById('eval-feedback-text');
+
+            if (finalScore >= 90) {
+                stars.innerText = '⭐⭐⭐⭐⭐';
+                feedbackText.innerText = '"Hebat! Kamu Penjelajah Ibadah sejati. Teruslah membiasakan shalat sunah!"';
+            } else if (finalScore >= 75) {
+                stars.innerText = '⭐⭐⭐⭐';
+                feedbackText.innerText = '"Bagus Sekali! Kamu sudah memahami shalat sunah dengan baik."';
+            } else if (finalScore >= 60) {
+                stars.innerText = '⭐⭐⭐';
+                feedbackText.innerText = '"Cukup Baik! Pelajari kembali zona materi untuk nilai yang lebih tinggi."';
+            } else {
+                stars.innerText = '⭐⭐';
+                feedbackText.innerText = '"Ayo belajar dan coba lagi! Kamu pasti bisa!"';
+            }
+
+            playAudio('sound-star');
+        }
+
+        function restartEvaluasi() {
+            playAudio('sound-click');
+            initEvaluasi();
+        }
+
+        // Initialize App on window load
+        window.onload = function() {
+            navigateTo('splash');
+        };
+    </script>
+</body>
+</html>
+```
